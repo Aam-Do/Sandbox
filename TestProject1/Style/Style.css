@@ -2,6 +2,13 @@
     outline: none;
     box-shadow: none;
 }
-body {
-    height: 4000px;
+
+:root {
+    --bs-primary-rgb: 163, 8, 34;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #a30822;
+    border-color: #a30822;
 }
