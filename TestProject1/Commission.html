@@ -77,6 +77,7 @@
             <div class="form-floating mb-3 mt-3">
                 <select class="form-select" id="render" name="render">
                     <option>Sketch</option>
+                    <option>Lineart</option>
                     <option>Flat Colors</option>
                     <option>Rendered Character (Character Sheet: only available for one pose)</option>
                     <option>Full render (incl. background, not available for Emotes)</option>
@@ -93,9 +94,18 @@
                 </select>
                 <label for="style" class="form-label">Select artstyle:</label>
             </div>
+            <h4 class="mt-4">Lineart Style</h4>
+            <p>Choose what kind of lineart style you want. Sketches will not have lineart. Sketched Lineart features loose sketched lines while Clean Lineart is smooth and clean.</p>
+            <div class="form-floating mb-3 mt-3">
+                <select class="form-select" id="style" name="style">
+                    <option>Sketched Lineart</option>
+                    <option>Clean Lineart</option>
+                    <option>Painting (No Lineart - only available for Rendered and Full Render)</option>
+                </select>
+                <label for="style" class="form-label">Select artstyle:</label>
+            </div>
             <h4 class="mt-4">Description</h4>
-            <p>Describe what you want. What kind of character, what kind of pose, background, clothing, emotion, etc...?
-                You can attach reference images later.</p>
+            <p>Describe what you want. What kind of character, what kind of pose, background, clothing, emotion, etc...? You can also ask questions or request something that hasn't been listed yet</p>
             <div class="form-floating">
                 <textarea class="form-control" id="description" name="text" placeholder="description goes here"
                     rows="10" style="height: 200px;"></textarea>
@@ -154,7 +164,7 @@
         <div class="d-flex flex-column-reverse flex-lg-row justify-content-md-between">
             <p class="ms-lg-5 ms-2" style="display: inline;">©2022 Ivy_Arts03 – All Rights Reserved</p>
             <div class="text-lg-end mb-3 mb-lg-0">
-                <a class="footer-link ms-2" style="display: inline;" href="#">Home</a>
+                <a class="footer-link ms-2" style="display: inline;" href="Home.html">Home</a>
                 <a class="footer-link ms-lg-5 ms-2" style="display: inline;" href="#">Privacy Policy</a>
                 <a class="footer-link ms-lg-5 ms-2" style="display: inline;" href="#">Disclaimers</a>
                 <a class="footer-link mx-lg-5 mx-2" style="display: inline;" href="#">Terms of Use</a>
