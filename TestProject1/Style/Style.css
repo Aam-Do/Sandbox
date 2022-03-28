@@ -3,13 +3,19 @@
     box-shadow: none;
 }
 
-:root {
+/* :root {
     --bs-primary-rgb: 163, 8, 34 !important;
+} */
+
+.bg-red {  
+    background-color: #a30822 !important;
+    color: white;
 }
 
-.btn-primary {
+.btn-red {
     background-color: #a30822 !important;
     border-color: #a30822 !important;
+    color: white;
 }
 
 .commission-preview {
