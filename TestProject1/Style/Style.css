@@ -12,6 +12,17 @@
     border-color: #a30822 !important;
 }
 
+.btn-outline-primary {
+    background-color: #a3082200 !important;
+    color: #a30822 !important;
+    border-color: #a30822 !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active {
+    background-color: #a30822 !important;
+    color: white !important;
+}
+
 .commission-preview {
     max-width: 700px;
 }
