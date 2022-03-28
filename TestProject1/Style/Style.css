@@ -11,3 +11,24 @@
     background-color: #a30822 !important;
     border-color: #a30822 !important;
 }
+
+.commission-preview {
+    max-width: 700px;
+}
+
+@media only screen and (max-width: 991px) {
+    .commission-preview {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .commission-preview {
+        max-width: 300px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .commission-preview {
+        max-width: 100%;
+    }
+}
