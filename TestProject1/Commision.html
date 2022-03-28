@@ -44,14 +44,59 @@
                     </li>
                 </ul>
                 <div class="d-flex nav-item">
-                    <a class="ps-0 ps-sm-3 navbar-text nav-link" target="_blank" href="https://www.instagram.com/ivy_arts03/?hl=de"><i class="fa-brands fa-instagram"></i></a>
-                    <a class="ps-0 ps-sm-3 navbar-text nav-link" target="blank" href="https://aam_do03.artstation.com/"><i class="fa-brands fa-artstation"></i></a>
+                    <a class="ps-0 ps-sm-3 navbar-text nav-link" target="_blank"
+                        href="https://www.instagram.com/ivy_arts03/?hl=de"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="ps-0 ps-sm-3 navbar-text nav-link" target="blank"
+                        href="https://aam_do03.artstation.com/"><i class="fa-brands fa-artstation"></i></a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="container mt-5 mt-md-8">
-
+        <h1>Commission</h1>
+        <p>Turn your ideas into digital drawings by me, Ivy! May it be a gift for someone, an avatar for Twitch, custom
+            Discord emotes or a 4k desktop wallpaper. I draw everything with lots of love and attention to detail!</p>
+        <h2 class="mt-5">Choose your option</h2>
+        <form action="#" class="mt-4">
+            <h4>Type</h4>
+            <p>Note that some types also influence render style and image size!</p>
+            <div class="form-floating mb-3 mt-3">
+                <select class="form-select" id="type" name="type">
+                    <option>Emote</option>
+                    <option>Portrait</option>
+                    <option>Full Body</option>
+                    <option>Character Sheet</option>
+                    <option>Scene</option>
+                </select>
+                <label for="type" class="form-label">Select type (select one):</label>
+            </div>
+            <h4 class="mt-4">Render Style</h4>
+            <p>Defines if the image should be a sketch, flat colors or fully rendered. Note that some render styles are not available for certain types.</p>
+            <div class="form-floating mb-3 mt-3">
+                <select class="form-select" id="render" name="render">
+                    <option>Sketch</option>
+                    <option>Flat Colors</option>
+                    <option>Rendered Character (Character Sheet: only available for one pose)</option>
+                    <option>Full render (incl. background, not available for Emotes)</option>
+                </select>
+                <label for="render" class="form-label">Select render style (select one):</label>
+            </div>
+            <h4 class="mt-4">Artstyle</h4>
+            <p>I draw in various artstyles. You can choose from my own options, or request that I copy a certain style. However, I </p>
+            <div class="form-floating mb-3 mt-3">
+                <select class="form-select" id="style" name="style">
+                    <option>Chibi</option>
+                    <option>Stylized</option>
+                    <option>Semi-Realistic</option>
+                    <option>Custom</option>
+                </select>
+                <label for="style" class="form-label">Select artstyle (select one):</label>
+            </div>
+            <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+                <label for="email">Email</label>
+            </div>
+        </form>
     </div>
     <div class="mt-5 p-4 bg-dark text-white text-center">
         <div class="d-flex flex-column-reverse flex-lg-row justify-content-md-between">
