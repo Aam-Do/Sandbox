@@ -10,6 +10,7 @@ function hndLoad() {
     contactInput.addEventListener("change", hndChange);
     form = document.querySelector("#commissionForm");
     form.addEventListener("change", hndFormChange);
+    hndFormChange();
 }
 
 function hndChange() {
@@ -27,23 +28,34 @@ function hndFormChange(_event) {
     let priceTotal = 0;
     let formData = new FormData(document.forms[0]);
     let counter = 0;
+    let sketch = false;
     for (let entry of formData) {
-        console.log(entry);
+        let selector = document.querySelector("#lineart");
+        if (entry[1] == "sketch") {
+            sketch = true;
+        }
+        else if (sketch == false) {
+            selector.disabled = false
+            // selector.firstChild.setAttribute("disabled", true);
+        }
+        if (entry[0] == "lineart" && sketch == true) {
+            entry[1] = "none_sketch";
+            selector.disabled = true;
+            selector.selectedIndex = 0;
+            selector.value = "none_sketch";
+        }
         let item = document.querySelector("[value='" + entry[1] + "']");
         let price = Number(item.getAttribute("price"));
+        console.log(item, price);
         if (counter == 0) {
             priceTotal += price;
         }
         else {
             priceTotal *= price;
         }
+
         counter++;
     }
     priceHTML.innerHTML = Math.round((priceTotal + Number.EPSILON) * 100) / 100;
-
-    console.log(formData[1])
-    if (formData[1][1] == "sketch") {
-        console.log("sketch")
-    }
 }
 
