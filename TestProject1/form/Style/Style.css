@@ -1,0 +1,68 @@
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+:root {
+    --bs-primary-rgb: 163, 8, 34 !important;
+}
+
+.btn-primary {
+    background-color: #a30822 !important;
+    border-color: #a30822 !important;
+}
+
+.btn-outline-primary {
+    background-color: #a3082200 !important;
+    color: #a30822 !important;
+    border-color: #a30822 !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:active {
+    background-color: #a30822 !important;
+    color: white !important;
+}
+
+.commission-preview {
+    max-width: 700px;
+}
+
+@media only screen and (max-width: 991px) {
+    .commission-preview {
+        max-width: 400px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .commission-preview {
+        max-width: 300px;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .commission-preview {
+        max-width: 100%;
+    }
+}
+
+.form-check-input:checked {
+    background-color: #a30822 !important;
+    border-color: #a30822 !important;
+}
+
+.form-check-input:focus {
+    border-color: #d64961 !important;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#lineart[readonly="true"] {
+    background-color: rgb(223, 223, 223);
+}
