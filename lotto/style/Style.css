@@ -1,0 +1,517 @@
+@font-face {
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    src: url(./TCCEB.TTF);
+}
+@font-face {
+    font-family: "Tw Cen MT Condensed";
+    src: url(./TCCB____.TTF);
+}
+@font-face {
+    font-family: "Daddys Girl";
+    src: url(./daddysgirl.ttf);
+}
+@font-face {
+    font-family: "Frutiger Light";
+    src: url(./FrutigerLTStd-Light.otf) format("opentype");
+}
+@font-face {
+    font-family: "Frutiger";
+    src: url(./FrutigerLTStd-Bold.otf) format("opentype");
+}
+@font-face {
+    font-family: "Frutiger Bold";
+    src: url(./FrutigerLTStd-Black.otf) format("opentype");
+}
+
+:root {
+    --red: #d22321;
+    --yellow: #f7dc16;
+    --blue: #334163;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+html {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#sleeve {
+    margin: auto;
+    width: 78%;
+    height: 240vw;
+    box-shadow: 0px 0px 25px 20px #e3e3e3;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 6.43%);
+    grid-template-rows: [first] 5.17% [logo-end] 20.65% [headline-end] 14.78% [red-end] 7.02% [button-end] 5.18% [instructions-start] 9.23% [instructions-end] 8.9% [yellow-start] 10.87% [yellow-end] 10.88% [form-end] 5.12% [footer1] 1.42% [footer2] 2fr [last];
+    justify-content: space-between;
+}
+
+#red {
+    background-color: var(--red);
+    grid-column: 1 / -1;
+    grid-row: first / red-end;
+}
+
+.woman {
+    margin: 0px;
+    grid-column: 3 / -1;
+    grid-row: first / red-end;
+    justify-self: end;
+    align-self: flex-end;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+}
+
+#lottoLogo {
+    grid-column: 2 / 6;
+    grid-row: first / logo-end;
+    width: 120%;
+    height: 100%;
+    justify-self: start;
+    align-self: start;
+    z-index: 2;
+    box-shadow: 5px 5px 17px 9px #0c0c0c4d;
+}
+
+#headline {
+    padding: 0px;
+    color: white;
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    grid-column: 2 / 9;
+    grid-row: logo-end / headline-end;
+    align-self: end;
+    justify-self: start;
+    z-index: 2;
+    max-width: 100%;
+    max-height: 100%;
+    padding-bottom: 2.5%;
+}
+
+h1 {
+    font-size: 13.36vw;
+    text-transform: uppercase;
+    line-height: 86%;
+    text-shadow: 5px 5px 13px #0c0c0c4d;
+    margin-bottom: 6%;
+    letter-spacing: .02em;
+}
+
+.fa-venus {
+    font-size: 10.6vw;
+    position: relative;
+    top: -5%;
+}
+
+h2 {
+    margin: 0px;
+    font-size: 5vw;
+    letter-spacing: .015em;
+}
+
+li {
+    text-transform: uppercase;
+}
+
+#blackCircle {
+    background-color: black;
+    grid-row: headline-end / button-end;
+    grid-column: 1 / 9;
+    max-width: 110%;
+    max-height: 110%;
+    border-radius: 50%;
+    transform: rotate(-3deg);
+    z-index: 2;
+    margin: 2.7% 0% 0% 2.7%;
+    padding: 2%;
+}
+
+#yellowText {
+    margin-top: 10%;
+    color: var(--yellow);
+    line-height: 0.98;
+    text-align: center;
+    font-family: "Tw Cen MT Condensed";
+    font-weight: bold;
+    text-shadow: 0px 0px 11.83px rgba(19, 19, 19, 0.3);
+    font-size: 5vw;
+    margin-bottom: 0px;
+    padding: 2%;
+}
+
+#redNumber {
+    color: var(--red);
+    text-align: center;
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    text-shadow: 0px 2px 24px rgba(29, 29, 27, 0.58);
+    font-size: 14vw;
+    margin: -2% 0 0 0;
+    position: relative;
+    left: 2%; 
+}
+
+#whiteText {
+    margin-top: -4.5%;
+    color: white;
+    text-align: right;
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    font-size: 3.12vw;
+    position: relative;
+    right: 13%;
+    margin-bottom: 3%;
+}
+
+#QR {
+    position: relative;
+    width: 48%;
+    left: 23.5%;
+    height: auto;
+    transform: rotate(-1deg);
+}
+
+#buttonRed {
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    text-transform: uppercase;
+    grid-row: red-end / button-end;
+    grid-column: 7 / 12;
+    align-self: end;
+    width: 100%;
+    height: 39.95%;
+    font-size: 3.14vw;
+    color: white;
+    background: rgb(233,24,25);
+    background: linear-gradient(0deg, #e91819 0%, #d70608 42%, #d70608 57%, #da7b77 100%);
+    border: 4px solid var(--red);
+    border-radius: 28px;
+    text-shadow: 2px 2px 5px rgba(29, 29, 27, 0.58);
+    z-index: 3;
+    letter-spacing: 0.05em;
+}
+
+#buttonRed .fa-caret-right {
+    margin-right: 0.2vw;
+}
+
+#buttonRed .fa-caret-left {
+    margin-left: 0.2vw;
+}
+
+#sleeve > p {
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    color: var(--blue);
+    grid-column: 8 / -1;
+    grid-row: red-end / button-end;
+    justify-self: end;
+    align-self: start;
+    max-width: 100%;
+    font-size: 1.5vw;
+    margin: 3% 6% 0 0;
+    line-height: 1.458;
+    letter-spacing: 0.01em;
+}
+
+#instructions {
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    color: var(--blue);
+    max-width: 91%;
+    height: 100%;
+    margin: 0px;
+    padding-left: 2.5vw;
+    grid-column: 2 / -1;
+    justify-self: start;
+    grid-row: instructions-start / instructions-end;
+    margin-top: -0.2%;
+}
+
+#instructions li {
+    font-size: 2.5vw;
+}
+
+#instructions p {
+    font-size: 2.26vw;
+    margin: 1% 0% 2% -3.7%;
+}
+
+#slogan {
+    font-family: "Daddys Girl";
+    color: var(--red);
+    grid-row: instructions-end / yellow-start;
+    grid-column: 2 / 12;
+    max-width: 100%;
+    font-size: 9.5vw;
+    transform: rotate(-3deg);
+    align-self: center;
+    text-align: center;
+    line-height: 0.8em;
+}
+
+#yellow {
+    grid-column: 1 / -1;
+    grid-row: yellow-start / yellow-end;
+    background-color: var(--yellow);
+    color: #2d0700;
+    font-family: "Tw Cen MT Condensed Extra Bold";
+    text-align: center;
+}
+
+#yellow img {
+    width: 35%;
+    height: auto;
+}
+
+#yellow p {
+    margin: 0;
+    font-size: 3.5vw;
+}
+
+.fa-phone {
+    font-size: 2.8vw;
+}
+
+#yellow p:last-child {
+    margin-top: 1.4%;
+    font-size: 1.9vw;
+}
+
+#form {
+    margin-top: 1%;
+    grid-row: yellow-end / form-end;
+    grid-column: 2 / 12;
+    justify-self: start;
+    color: var(--blue);
+    font-family: "Frutiger";
+    letter-spacing: 0.002em;
+}
+
+#form h3 {
+    text-transform: uppercase;
+    font-size: 1.85vw;
+    margin-bottom: 2%;
+    font-family: "Frutiger Bold";
+}
+
+#form h3:last-of-type {
+    margin-top: 7%;
+    display: inline-block;
+}
+
+#form button {
+    font-weight: lighter;
+    background-color: var(--blue);
+    color: white;
+    display: inline-block;
+    border-radius: 100px;
+    border: 2px solid var(--blue);
+    font-size: 1.6vw;
+    width: 27.65%;
+    height: 17.44%;
+    margin-left: 3.2%;
+    font-family: "Frutiger Light";
+    position: relative;
+    top: -1%;
+}
+
+#form button:last-of-type {
+    top: 0;
+    margin-left: 25.5%;
+}
+
+.fa-magnifying-glass, .fa-paper-plane {
+    font-size: 1.5vw;
+}
+
+#form input {
+    border-radius: 100px;
+    display: inline-block;
+    border: 2px solid #b1b4c3;
+    width: 59.13%;
+    height: 16.84%;
+    font-size: 2.26vw;
+    padding: 0 0 0 4%;
+    letter-spacing: 0.002em;
+}
+
+#form input::placeholder {
+    font-family: "Frutiger";
+    color: #b1b4c3;
+    letter-spacing: 0.002em;
+}
+
+#form p {
+    margin-top: 0;
+    font-size: 1.45vw;
+    width: 58.13%;
+    line-height: 1.6em;
+}
+
+#info {
+    font-family: "Frutiger" !important;
+    color: black !important;
+    grid-column: 2 / 10 !important;
+    grid-row: form-end / footer1 !important;
+    justify-self: start !important;
+    align-self: center !important;
+    font-size: 1.18vw !important;
+    margin: 0px 0px 4% 0px !important;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+}
+
+#info b {
+    font-family: "Frutiger Bold"
+}
+
+#footer1 {
+    font-family: "Frutiger";
+    color: black;
+    font-size: 1.18vw;
+    grid-column: 2 / 12;
+    grid-row: form-end / footer1;
+    align-self: end;
+}
+
+#footer1 p, #footer2 p {
+    display: inline;
+    margin: 0px 4.05% 0px 0px;
+}
+
+#footer1 img {
+    width: 42.74%;
+    height: auto;
+}
+
+#footer2 {
+    font-family: "Frutiger";
+    color: black;
+    font-size: 1.18vw;
+    grid-column: 2 / 12;
+    grid-row: footer1 / footer2;
+    align-self: end;
+}
+
+#footer2 span p {
+    margin: 0px 0px 0px 3%;
+}
+
+#footer2 > p {
+    margin-right: 25%;
+}
+
+@media only screen and (max-width: 640px) {
+    #sleeve {
+        width: 100%;
+        height: 308vw;
+        grid-template-rows: [first] 5.17% [logo-end] 20.65% [headline-end] 14.78% [red-end] 7.02% [button-end] 5.18% [instructions-start] 9.23% [instructions-end] 8.9% [yellow-start] 10.87% [yellow-end] 10.88% [form-end] 5.12% [footer1] 1.42% [footer2] 2fr [last];
+    }
+    #lottoLogo {
+        box-shadow: 4px 4px 9px 3px #0c0c0c4d;
+    }
+    h1 {
+        font-size: calc(1.15 * 13.36vw);
+        text-shadow: 4px 4px 6px #0c0c0c4d;
+    }
+    .fa-venus {
+        font-size: calc(1.15 * 10.6vw);
+    }
+    h2 {
+        font-size: calc(1.15 * 5vw);
+    }
+    #yellowText { 
+        font-size: calc(1.3333 * 5vw);
+    }
+    #redNumber {
+        font-size: calc(1.3333 * 14vw);
+    }
+    #whiteText {
+        font-size: calc(1.3333 * 3.12vw);
+    }
+    #QR {
+        width: 45%;
+    }
+    #buttonRed {
+        font-size: calc(1.2 * 3.14vw);
+        border: 1px solid var(--red);
+    }
+    #buttonRed .fa-caret-right {
+        margin-right: calc(1.2 * 0.2vw);
+    }
+    #buttonRed .fa-caret-left {
+        margin-left: calc(1.2 * 0.2vw);
+    }
+    #sleeve > p {
+        font-size: calc(1.3333 * 1.5vw);
+    }
+    #instructions {
+        padding-left: calc(1.3333 * 2.5vw);
+        max-width: 89%;
+    }
+    #instructions li {
+        font-size: calc(1.4 * 2.5vw);
+    }
+    #instructions p {
+        font-size: calc(1.45 * 2.26vw);
+    }
+    #slogan {
+        margin-top: 8%;
+        font-size: 9.5vw;
+    }
+    #yellow p {
+        font-size: calc(1.3333 * 3.5vw);
+    }
+    .fa-phone {
+        font-size: calc(1.3333 * 2.8vw);
+    }
+
+    #yellow p:last-child {
+        font-size: calc(1.3333 * 1.9vw);
+    }
+    #form h3 {
+        font-size: calc(1.3333 * 1.85vw);
+    }
+    #form button {
+        font-size: calc(1.3333 * 1.6vw);
+    }
+    .fa-magnifying-glass, .fa-paper-plane {
+        font-size: calc(1.3333 * 1.5vw);
+    }
+    #form input {
+        font-size: calc(1.3333 * 2.26vw);
+    }
+    #form p {
+        font-size: calc(1.3333 * 1.45vw);
+    }
+    #info {
+        font-size: calc(1.3333 * 1.18vw) !important;
+    }
+    #footer1 {
+        font-size: calc(1.3333 * 1.18vw);
+    }
+    #footer2 {
+        font-size: calc(1.3333 * 1.18vw);
+    }
+    #footer2 span p {
+        margin: 0px 0px 0px 3%;
+    }
+    #footer1 p, #footer2 p {
+        display: inline;
+        margin: 0px 3.2% 0px 0px;
+    }
+    
+    #footer2 > p {
+        margin-right: 22%;
+    }
+    #form button:last-of-type {
+        margin-left: 24.5%;
+    }
+}
