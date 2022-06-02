@@ -1,0 +1,232 @@
+header,
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    background-color: var(--grey);
+    font-family: "ITC Avant Garde Gothic";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: column;
+    z-index: 999;
+}
+
+header li {
+    list-style: none;
+}
+
+header>nav>.navbar-collapse>div {
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.navbar-collapse {
+    justify-content: center;
+    align-self: end;
+    flex-basis: initial;
+}
+
+ul.nav.navbar-nav {
+    flex-direction: row;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+
+header .navbar li {
+    list-style-type: none;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+}
+
+header .nav.navbar-nav>li,
+header .nav.navbar-nav>li>.sub-menu {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+header .nav.navbar-nav>li>a {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px 21px;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+header .nav.navbar-nav>li.current-menu-item>a,
+header .sub-menu>li.current-menu-item {
+    background-color: var(--cyan);
+    color: white;
+}
+
+
+header .nav.navbar-nav>li:not(.current-menu-item)>a:hover,
+.sub-menu li:not(.current-menu-item)>a:hover {
+    color: var(--cyan);
+}
+
+header .nav.navbar-nav>li>.sub-menu,
+.sub-menu .sub-menu {
+    position: absolute;
+    padding: 20px 0;
+    z-index: 9999;
+    width: fit-content;
+    visibility: hidden;
+    opacity: 0;
+    border-top: 3px solid var(--cyan);
+    background-color: var(--dark);
+    box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+    -webkit-transform: translateZ(0);
+    text-align: left;
+}
+
+header .nav.navbar-nav>li>.sub-menu {
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+header .nav.navbar-nav>.menu-item-has-children::after,
+.menu-item-has-children .menu-item-has-children::after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f107";
+    font-size: 16px;
+    font-weight: 800;
+    padding-left: 10px;
+    position: absolute;
+    right: 10%;
+    top: 25px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+header .nav.navbar-nav>.menu-item-has-children>a {
+    padding-right: 45px;
+}
+
+header .nav.navbar-nav>li:not(.current-menu-item):hover {
+    color: var(--cyan);
+}
+
+/* .menu-item-has-children .menu-item-has-children>a:after {} */
+
+header .nav.navbar-nav>.menu-item-has-children:hover>.sub-menu,
+.sub-menu .menu-item-has-children:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-out;
+}
+
+.sub-menu li:not(.sub-menu .sub-menu li) {
+    position: relative;
+    width: 100%;
+}
+
+.sub-menu li a {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 21px;
+    transition: color 0.3s;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.sub-menu .sub-menu {
+    left: 240px;
+    top: -23px;
+    width: auto;
+}
+
+.wpml-ls-item {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.wpml-ls-item:not(:last-child) a {
+    padding-right: 0px !important;
+}
+
+.wpml-ls-menu-item .wpml-ls-flag {
+    height: 20px;
+}
+
+@media (max-width: 992px) {
+    .template-part-pillars>div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .template-part-logos>div {
+        max-width: 668px;
+    }
+
+    .navbar-toggler {
+        margin: 11px 40px;
+        align-self: end;
+    }
+
+    .navbar-collapse {
+        align-self: start;
+        width: 100%;
+        max-height: 90vh;
+        overflow: scroll;
+    }
+
+    header .nav.navbar-nav>li>a {
+        font-size: 15px;
+        padding: 10px 50px;
+    }
+
+    header .nav.navbar-nav>.menu-item-has-children:after,
+    .menu-item-has-children .menu-item-has-children:after {
+        padding: 10px 20px;
+    }
+
+    header .nav.navbar-nav>li>.sub-menu,
+    .sub-menu .sub-menu {
+        position: initial;
+        visibility: initial;
+        opacity: initial;
+        display: none;
+        transition: none !important;
+        left: 0;
+        transform: none;
+    }
+
+    header .nav.navbar-nav>.menu-item-has-children:hover>.sub-menu,
+    .sub-menu .menu-item-has-children:hover .sub-menu {
+        position: initial;
+        visibility: initial;
+        opacity: initial;
+    }
+
+    .sub-menu li a {
+        padding: 10px 50px 10px 70px;
+    }
+
+    .sub-menu li .sub-menu li a {
+        padding: 10px 50px 10px 90px;
+    }
+
+    .sub-menu li {
+        position: relative;
+        width: 100%;
+    }
+}
